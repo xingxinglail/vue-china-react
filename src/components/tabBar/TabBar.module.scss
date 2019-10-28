@@ -1,0 +1,12 @@
+@import '../../assets/scss/variable';
+
+:global(.am-tab-bar) {
+  position: fixed;
+  width: 100%;
+  max-width: $max-width;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  height: auto;
+}

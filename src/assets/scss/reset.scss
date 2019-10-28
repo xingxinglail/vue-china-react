@@ -1,3 +1,5 @@
+@import './variable';
+
 body, div, aside, menu, ul, ol, li, p, dl, dt, dd, h1, h2, h3, h4, h5, h6, textarea, input, select {
     margin: 0;
     padding: 0;
@@ -7,8 +9,8 @@ body, div, aside, menu, ul, ol, li, p, dl, dt, dd, h1, h2, h3, h4, h5, h6, texta
 body {
     color: #333;
     font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
-    max-width: 540px;
-    margin: 0 auto;
+    max-width: $max-width;
+    margin: 0 auto !important;
 }
 
 ul, ol, li{
