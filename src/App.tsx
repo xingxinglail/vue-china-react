@@ -6,14 +6,8 @@ import {
     Link
 } from 'react-router-dom';
 import { Header } from './components/header/Header';
-import Button from 'antd-mobile/lib/button';
+import Index from './views/index/Index';
 import TabBar from './components/tabBar/TabBar';
-
-const Index: React.FC = () => {
-    return (
-        <div>Index</div>
-    );
-};
 
 const Mine: React.FC = () => {
     return (
@@ -25,6 +19,10 @@ const App: React.FC = () => {
     return (
         <Router>
             <div>
+                <Switch>
+                    <Route exact path="/" component={ Index } />
+                    <Route path="/mine" component={ Mine } />
+                </Switch>
                 <nav>
                     <ul>
                         <li>
@@ -35,17 +33,8 @@ const App: React.FC = () => {
                         </li>
                     </ul>
                 </nav>
-                <Switch>
-                    <Route exact path="/">
-                        <Index />
-                    </Route>
-                    <Route path="/mine">
-                        <Mine />
-                    </Route>
-                </Switch>
             </div>
             <Header />
-            <Button>Click Me</Button>
             <TabBar />
         </Router>
     );
