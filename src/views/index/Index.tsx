@@ -7,6 +7,7 @@ import Content from './components/content/Content';
 import { Topic } from '../../types';
 import { getTopics } from '../../api';
 import { useEndReached } from '../../useUtil';
+import { Icon } from 'drug-ui';
 
 interface TabKey {
     [key: string]: string
@@ -103,6 +104,9 @@ const Index: React.FC = () => {
 
     return (
         <div className={ styles.index }>
+            <div>
+                <Icon name="left" />
+            </div>
             { TabsMemo }
             <div className={ styles.wrapper }>
                 {
