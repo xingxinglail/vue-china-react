@@ -11,6 +11,7 @@ export default () => {
     const onPressHandle = (key: string) => {
         if (key === location.pathname) return;
         history.push(key);
+        console.log("test")
     };
 
     const TabBarMemo = useMemo(() => {
